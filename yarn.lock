@@ -663,6 +663,13 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/bn.js@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/bn.js/-/bn.js-5.1.0.tgz#32c5d271503a12653c62cf4d2b45e6eab8cebc68"
+  integrity sha512-QSSVYj7pYFN49kW77o2s9xTCwZ8F2xLbjLLSEVh8D2F4JUhZtPAGOFLTD+ffqksBx/u4cE/KImFjyhqCjn/LIA==
+  dependencies:
+    "@types/node" "*"
+
 "@types/eslint@^7.2.13":
   version "7.28.0"
   resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-7.28.0.tgz#7e41f2481d301c68e14f483fe10b017753ce8d5a"
@@ -3592,10 +3599,10 @@ near-api-js@near/near-api-js#spike/sandbox-runner-tweaks:
     text-encoding-utf-8 "^1.0.2"
     tweetnacl "^1.0.1"
 
-near-runner@0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/near-runner/-/near-runner-0.6.0.tgz#c026119709f6b5cecfad5193e8f3138239b8bdf5"
-  integrity sha512-0DqqTWQ7AjrnR4nHj64s1HvgrjnA99NieDB6a5TXRR9fDLxF/XVDjByM4BUtPnCK8Yq6W9LmtMyn6Xj9tmqu3Q==
+near-runner@0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/near-runner/-/near-runner-0.6.1.tgz#e098664543a385f84ce5bea71c1d7146011703ab"
+  integrity sha512-ddcmO5qkVRiLQp9b4eK9UtkMysaQWDfWGqM73hbCPoK8Xjyi11TNsotPkesrjd5/NYPcgFjggGnO2buPJPGhig==
   dependencies:
     base64url "^3.0.1"
     bn.js "^5.2.0"

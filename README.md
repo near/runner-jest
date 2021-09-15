@@ -17,11 +17,10 @@ Quick Start
 
     npx near-runner-init && npm install       # npm
     npx near-runner-init && yarn              # Yarn 1
-    yarn dlx near-runner-init --yarn2 && yarn # Yarn 2
 
 It will:
 
-* Add a `__tests__` directory to your project (or `tests` or `runner-tests` if necessary to avoid conflicting with existing tests)
+* Add a `__tests__` directory to your project
 * Create a `package.json` file in the tests directory, if none found in project root (not a JS project)
 * ...
 

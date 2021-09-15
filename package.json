@@ -6,11 +6,15 @@
   "author": "Near Inc (team@near.org)",
   "license": "(MIT AND Apache-2.0)",
   "main": "dist/index.js",
-  "bin": "dist/cli.js",
+  "bin": {
+    "near-runner-jest": "dist/scripts/test.js"
+  },
   "types": "dist/index.d.ts",
   "files": [
     "dist/",
-    "tsconfig.json"
+    "tsconfig.json",
+    "scripts/jest.config.ts",
+    "scripts/setup.js"
   ],
   "scripts": {
     "build": "tsc",
@@ -22,10 +26,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@types/bn.js": "^5.1.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.10",
     "jest": "^27.0.6",
-    "near-runner": "0.6.0",
+    "near-runner": "0.6.1",
     "ts-jest": "^27.0.4",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
@@ -37,20 +42,6 @@
   "engines": {
     "node": "^14.17.0 || >=16.0.0",
     "npm": ">= 6.0.0"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/__tests__/**/*.spec.ts"
-    ],
-    "setupFilesAfterEnv": [
-      "./__tests__/internal/setup.js"
-    ],
-    "testPathIgnorePatterns": [
-      "/assembly/",
-      "/node_modules/"
-    ]
   },
   "xo": {
     "space": true,
