@@ -1,0 +1,75 @@
+{
+  "name": "near-runner-jest",
+  "version": "0.1.0",
+  "description": "Thin wrapper around near-runner to make it easier to use with Jest and TypeScript",
+  "repository": "https://github.com/near/runner-jest",
+  "author": "Near Inc (team@near.org)",
+  "license": "(MIT AND Apache-2.0)",
+  "main": "dist/index.js",
+  "bin": "dist/cli.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "prepublishOnly": "yarn build",
+    "test": "ts-node ./scripts/test.ts --verbose",
+    "test:ci": "NEAR_RUNNER_DEBUG=true ts-node ./scripts/test.ts --verbose",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.10",
+    "jest": "^27.0.6",
+    "near-runner": "0.6.0",
+    "ts-jest": "^27.0.4",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "xo": "^0.44.0"
+  },
+  "engines": {
+    "node": "^14.17.0 || >=16.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.spec.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "./__tests__/internal/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/assembly/",
+      "/node_modules/"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "unicorn/prefer-node-protocol": 0,
+      "unicorn/prefer-module": 0,
+      "unicorn/no-array-callback-reference": 0,
+      "node/prefer-global/url": 0
+    },
+    "overrides": [
+      {
+        "files": "__tests__/**/*.spec.ts",
+        "rules": {
+          "@typescript-eslint/no-unsafe-assignment": 0,
+          "unicorn/prefer-module": 0,
+          "@typescript-eslint/no-unsafe-call": 0,
+          "@typescript-eslint/no-empty-function": 0
+        }
+      }
+    ]
+  }
+}
