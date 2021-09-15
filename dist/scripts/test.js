@@ -21,8 +21,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const path = __importStar(require("path"));
-// import * as process from 'process';
-// import * as fs from 'fs/promises';
 if (!process.argv.includes('--config')) {
     process.argv.push('--config', path.join(__dirname, 'jest.config.js'));
 }
