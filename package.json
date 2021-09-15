@@ -7,7 +7,7 @@
   "license": "(MIT AND Apache-2.0)",
   "main": "dist/index.js",
   "bin": {
-    "near-runner-jest": "dist/scripts/test.js"
+    "near-runner-jest": "scripts/jest.js"
   },
   "types": "dist/index.d.ts",
   "files": [
@@ -21,8 +21,8 @@
     "lint": "xo",
     "lint:fix": "xo --fix",
     "prepublishOnly": "yarn build",
-    "test": "ts-node ./scripts/test.ts --verbose",
-    "test:ci": "NEAR_RUNNER_DEBUG=true ts-node ./scripts/test.ts --verbose",
+    "test": "node scripts/test.js",
+    "test:ci": "yarn test --verbose && yarn jest",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -62,5 +62,8 @@
         }
       }
     ]
+  },
+  "jest": {
+    "projects": ["./scripts"]
   }
 }
