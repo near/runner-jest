@@ -22,11 +22,8 @@
     "lint": "xo",
     "lint:fix": "xo --fix",
     "prepublishOnly": "yarn build",
-    "test": "node scripts/jest.js",
-    "test:sandbox": "yarn test",
-    "test:testnet": "NEAR_RUNNER_NETWORK=testnet yarn jest",
-    "test:sandbox:ci": "yarn test --verbose && yarn jest",
-    "test:testnet:ci": "yarn test:testnet --verbose && NEAR_RUNNER_NETWORK=testnet yarn jest",
+    "test": "node scripts/jest.js --verbose",
+    "test:ci": "NEAR_RUNNER_DEBUG=true yarn test",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -68,6 +65,8 @@
     ]
   },
   "jest": {
-    "projects": ["./scripts"]
+    "projects": [
+      "./scripts"
+    ]
   }
 }
