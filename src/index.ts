@@ -4,6 +4,9 @@ export * from 'near-runner';
 
 export declare interface Runner {
   test(description: string, fn: RunnerFn): void;
+  networkIsTestnet(): boolean;
+  networkIsSandbox(): boolean;
+  getNetworkFromEnv(): 'sandbox' | 'testnet';
 }
 
 export class Runner extends RawRunner {
