@@ -23,7 +23,7 @@
     "lint:fix": "xo --fix",
     "prepublishOnly": "yarn build",
     "test": "node scripts/jest.js --verbose",
-    "test:ci": "NEAR_RUNNER_DEBUG=true yarn test",
+    "test:ci": "(yarn test && yarn jest) || NEAR_RUNNER_DEBUG=true yarn test",
     "prepare": "husky install"
   },
   "dependencies": {
