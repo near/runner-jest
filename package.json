@@ -50,7 +50,8 @@
       "unicorn/prefer-node-protocol": 0,
       "unicorn/prefer-module": 0,
       "unicorn/no-array-callback-reference": 0,
-      "node/prefer-global/url": 0
+      "node/prefer-global/url": 0,
+      "@typescript-eslint/triple-slash-reference": 0
     },
     "overrides": [
       {
