@@ -12,7 +12,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist/",
-    "jest.tsconfig.json",
+    "tsconfig.jest.json",
     "jest.config.js",
     "scripts/setup.js",
     "scripts/jest.js"
