@@ -18,6 +18,9 @@
     "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
     "strictNullChecks": true, /* Enable strict null checks. */
     "noImplicitThis": true, /* Raise error on 'this' expressions with an implied 'any' type. */
+    "types": [
+      "jest"
+    ],
     "typeRoots": [ /* List of folders to include type definitions from. */
       "node_modules/@types"
     ],
