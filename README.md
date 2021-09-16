@@ -15,8 +15,8 @@ Quick Start
 
 `near-runner-init` is a one-time command to quickly initialize a project with near-runner-jest. You will need [NodeJS] and optionally [Yarn] installed on your system. Then:
 
-    npx near-runner-init && npm install       # npm
-    npx near-runner-init && yarn              # Yarn 1
+    npx near-runner-init && npm install # npm
+    npx near-runner-init && yarn        # Yarn 1
 
 It will:
 
@@ -39,7 +39,7 @@ Manual Install
 
 2. Initialize.
 
-   Make a `__tests__` folder (or `tests` or `runner-tests`), make your first test file. near-runner-jest looks for files in this directory with names ending in `*.spec.ts` or `*.test.ts`. Call your first test file `main.spec.js` for now if you're not sure what else to call it.
+   Make a `__tests__` folder, make your first test file. near-runner-jest looks for files in this directory with names ending in `*.spec.ts` or `*.test.ts`. Call your first test file `main.spec.js` for now if you're not sure what else to call it.
 
    Set up a `runner` with NEAR accounts, contracts, and state that will be used in all of your tests.
 
@@ -105,5 +105,4 @@ Manual Install
 
    Where `test.concurrent` comes [from Jest](https://jestjs.io/docs/api#testconcurrentname-fn-timeout) and `runner.run` comes [from near-runner](https://github.com/near/runner-js#how-it-works).
 
-See the [\_\_tests__](./__tests__) directory in this project for more examples.
-
+See the [`__tests__`](https://github.com/near/runner-js/tree/main/__tests__) directory in near-runner-js for more examples. Remember that you can replace the nested `test.concurrent`…`await runner.run` sequences with `runner.test` when using near-runner-jest.
