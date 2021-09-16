@@ -5,10 +5,6 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   rootDir: process.cwd(),
-  testMatch: [
-    '**/__tests__/**/*.spec.ts',
-    '**/__tests__/**/*.test.ts',
-  ],
   setupFilesAfterEnv: [
     path.join(__dirname, 'scripts', 'setup.js'),
   ],

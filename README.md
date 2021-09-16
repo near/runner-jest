@@ -22,9 +22,11 @@ Get Started
 
 2. Initialize.
 
-   Make a `__tests__` folder, make your first test file. near-runner-jest looks for files in this directory with names ending in `*.spec.ts` or `*.test.ts`. Call your first test file `main.spec.ts` for now if you're not sure what else to call it.
+   Make a `__tests__` folder, make your first test file. Call your first test file `main.ts` if you're not sure what else to call it.
 
-   Set up a `runner` with NEAR accounts, contracts, and state that will be used in all of your tests.
+   (near-runner-jest uses [Jest's default test matcher](https://jestjs.io/docs/configuration#testmatch-arraystring), which will find any `*.ts` or `*.js` files in the `__tests__` directory and any files project-wide with a `*.(spec|test).(ts|js)` suffix."Project-wide" here means "the directory in which you run `near-runner-jest`.")
+
+   In `main.ts`, set up a `runner` with NEAR accounts, contracts, and state that will be used in all of your tests.
 
    ```ts
    import path from 'path';
@@ -88,4 +90,4 @@ Get Started
 
    Where `test.concurrent` comes [from Jest](https://jestjs.io/docs/api#testconcurrentname-fn-timeout) and `runner.run` comes [from near-runner](https://github.com/near/runner-js#how-it-works).
 
-See the [`__tests__`](https://github.com/near/runner-js/tree/main/__tests__) directory in near-runner-js for more examples. Remember that you can replace the nested `test.concurrent`…`await runner.run` sequences with `runner.test` when using near-runner-jest.
+See the [`__tests__`](https://github.com/near/runner-js/tree/main/__tests__) directory in near-runner-js for more examples. Remember that you can replace the nested `test.concurrent`…`await runner.run` sequences with `runner.test`.
