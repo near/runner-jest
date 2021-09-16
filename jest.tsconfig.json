@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "incremental": true,
     "target": "ES2019",
     "module": "commonjs",
     "lib": [
@@ -8,9 +7,6 @@
       "ESNext"
     ],
     "allowJs": true,
-    "declaration": true,
-    "sourceMap": true,
-    "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   }
