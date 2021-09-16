@@ -13,7 +13,7 @@
   "files": [
     "dist/",
     "tsconfig.json",
-    "jest.config.ts",
+    "jest.config.js",
     "scripts/setup.js",
     "scripts/jest.js"
   ],
