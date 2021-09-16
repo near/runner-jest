@@ -22,7 +22,7 @@ Get Started
 
 2. Initialize.
 
-   Make a `__tests__` folder, make your first test file. near-runner-jest looks for files in this directory with names ending in `*.spec.ts` or `*.test.ts`. Call your first test file `main.spec.js` for now if you're not sure what else to call it.
+   Make a `__tests__` folder, make your first test file. near-runner-jest looks for files in this directory with names ending in `*.spec.ts` or `*.test.ts`. Call your first test file `main.spec.ts` for now if you're not sure what else to call it.
 
    Set up a `runner` with NEAR accounts, contracts, and state that will be used in all of your tests.
 
