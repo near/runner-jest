@@ -22,7 +22,7 @@
       "jest"
     ],
     "typeRoots": [ /* List of folders to include type definitions from. */
-      "node_modules/@types"
+      "./node_modules/@types"
     ],
     "esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
