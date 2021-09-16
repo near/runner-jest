@@ -10,25 +10,8 @@ Write tests once, run them both on [NEAR TestNet](https://docs.near.org/docs/con
   [Jest]: https://jestjs.io/
   [TypeScript]: https://www.typescriptlang.org/
 
-Quick Start
+Get Started
 ===========
-
-`near-runner-init` is a one-time command to quickly initialize a project with near-runner-jest. You will need [NodeJS] and optionally [Yarn] installed on your system. Then:
-
-    npx near-runner-init && npm install # npm
-    npx near-runner-init && yarn        # Yarn 1
-
-It will:
-
-* Add a `__tests__` directory to your project
-* Create a `package.json` file in the tests directory, if none found in project root (not a JS project)
-* ...
-
-  [NodeJS]: https://nodejs.dev/
-  [Yarn]: https://yarnpkg.com/
-
-Manual Install
-==============
 
 1. Install.
 
