@@ -15,7 +15,7 @@
     "tsconfig.jest.json",
     "jest.config.js",
     "scripts/cli.js",
-    "scripts/init.js",
+    "scripts/bootstrap.js",
     "scripts/jest.js",
     "scripts/setup.js",
     "bootstrap-starter"
