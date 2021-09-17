@@ -39,7 +39,7 @@ const install = spawnSync('npm', [
   '--save-dev',
   'near-runner-jest'
 ], {
-  cwd: 'near-runner',
+  cwd: join(process.cwd(), 'near-runner'),
   stdio: 'inherit',
 });
 
