@@ -2,11 +2,8 @@ import {CreateRunnerFn, Config, RunnerFn, Runner as RawRunner} from 'near-runner
 
 export * from 'near-runner';
 
-export declare interface Runner {
+export declare interface Runner extends RawRunner {
   test(description: string, fn: RunnerFn): void;
-  networkIsTestnet(): boolean;
-  networkIsSandbox(): boolean;
-  getNetworkFromEnv(): 'sandbox' | 'testnet';
 }
 
 export class Runner extends RawRunner {
