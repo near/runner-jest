@@ -36,7 +36,7 @@ try {
 
 const install = spawnSync('npm', [
   'install',
-  '--saveDev',
+  '--save-dev',
   'near-runner-jest'
 ], {
   cwd: 'near-runner',
