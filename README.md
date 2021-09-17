@@ -10,8 +10,22 @@ Write tests once, run them both on [NEAR TestNet](https://docs.near.org/docs/con
   [Jest]: https://jestjs.io/
   [TypeScript]: https://www.typescriptlang.org/
 
-Get Started
+Quick Start
 ===========
+
+`near-runner-jest --bootstrap` is a one-time command to quickly initialize a project with near-runner-jest. You will need [NodeJS] installed. Then:
+
+    npx near-runner-jest --bootstrap
+
+It will:
+
+* Add a `near-runner` directory to the folder where you ran the command. This directory contains all the configuration needed to get you started with near-runner-jest, and a `__tests__` subfolder with a well-commented example test file.
+* Create `test.sh` and `test.bat` scripts in the folder where you ran the command. These can be used to quickly run the tests in `near-runner`. Feel free to integrate test-running into your project in a way that makes more sense for you, and then remove these scripts.
+
+  [NodeJS]: https://nodejs.dev/
+
+Manual Install
+==============
 
 1. Install.
 
@@ -20,13 +34,27 @@ Get Started
    yarn add --dev near-runner-jest         # yarn
    ```
 
+2. Configure.
+
+   You can use the `near-runner-jest` script to run `jest` using a [custom configuration file](./jest.config.js). You can add this to your `test` script in your `package.json`:
+
+       "test": "near-runner-jest"
+
+   Now you can run tests with `npm run test` or `yarn test`.
+
+   If you want to write tests with TypeScript (recommended), you can add a `tsconfig.json` to your project root with the following contents:
+
+       {"extends": "near-runner-jest/tsconfig.jest.json"}
+
+   If you already have TypeScript set up and you don't want to extend the config from `near-runner-jest`, feel free to just copy the settings you want from [tsconfig.jest.json](./tsconfig.jest.json).
+
 2. Initialize.
 
-   Make a `__tests__` folder, make your first test file. Call your first test file `main.ts` if you're not sure what else to call it.
+   Make a `__tests__` folder, make your first test file. Call your first test file `main.spec.ts` if you're not sure what else to call it.
 
-   (near-runner-jest uses [Jest's default test matcher](https://jestjs.io/docs/configuration#testmatch-arraystring), which will find any `*.ts` or `*.js` files in the `__tests__` directory and any files project-wide with a `*.(spec|test).(ts|js)` suffix."Project-wide" here means "the directory in which you run `near-runner-jest`.")
+   (near-runner-jest uses [Jest's default test matcher](https://jestjs.io/docs/configuration#testmatch-arraystring), which will find any `*.ts` or `*.js` files in the `__tests__` directory and any files project-wide with a `*.(spec|test).(ts|js)` suffix. "Project-wide" here means "the directory in which you run `near-runner-jest`.")
 
-   In `main.ts`, set up a `runner` with NEAR accounts, contracts, and state that will be used in all of your tests.
+   In `main.spec.ts`, set up a `runner` with NEAR accounts, contracts, and state that will be used in all of your tests.
 
    ```ts
    import path from 'path';

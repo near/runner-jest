@@ -7,29 +7,33 @@
   "license": "(MIT AND Apache-2.0)",
   "main": "dist/index.js",
   "bin": {
-    "near-runner-jest": "scripts/jest.js"
+    "near-runner-jest": "scripts/cli.js"
   },
   "types": "dist/index.d.ts",
   "files": [
     "dist/",
     "tsconfig.jest.json",
     "jest.config.js",
+    "scripts/cli.js",
+    "scripts/init.js",
+    "scripts/jest.js",
     "scripts/setup.js",
-    "scripts/jest.js"
+    "bootstrap-starter"
   ],
   "scripts": {
     "build": "tsc",
     "lint": "xo",
     "lint:fix": "xo --fix",
     "prepublishOnly": "yarn build",
-    "test": "node scripts/jest.js --verbose",
-    "test:ci": "(yarn test && yarn jest) || NEAR_RUNNER_DEBUG=true yarn test",
+    "test": "node scripts/jest.js --verbose --testPathIgnorePatterns=bootstrap-starter",
+    "test:ci": "(yarn test && yarn jest --testPathIgnorePatterns=bootstrap-starter) || NEAR_RUNNER_DEBUG=true yarn test",
     "prepare": "husky install"
   },
   "dependencies": {
     "@types/bn.js": "^5.1.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.10",
+    "fs-extra": "^10.0.0",
     "jest": "^27.0.6",
     "near-runner": "0.6.1",
     "ts-jest": "^27.0.4",
@@ -46,6 +50,9 @@
   },
   "xo": {
     "space": true,
+    "ignores": [
+      "bootstrap-starter"
+    ],
     "rules": {
       "unicorn/prefer-node-protocol": 0,
       "unicorn/prefer-module": 0,
